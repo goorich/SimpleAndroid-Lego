@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <Button
+            android:id="@+id/btn_neutral"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/btn_negative"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/btn_positive"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/btn_positive"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+</merge>

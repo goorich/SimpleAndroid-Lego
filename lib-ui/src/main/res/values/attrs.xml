@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GradientTabStrip">
+        <attr name="gtsTextSize" format="dimension" />
+        <attr name="gtsTextColor" format="color" />
+        <attr name="gtsDrawablePadding" format="dimension" />
+        <attr name="gtsDrawableWidth" format="dimension" />
+        <attr name="gtsDrawableHeight" format="dimension" />
+        <attr name="gtsBackground" format="reference" />
+        <attr name="gtsInterval" format="reference" />
+        <attr name="gtsMinItemWidth" format="dimension" />
+        <attr name="gtsTagTextSize" format="dimension" />
+        <attr name="gtsTagTextColor" format="color" />
+        <attr name="gtsTagBackground" format="reference" />
+        <attr name="gtsTagPadding" format="dimension" />
+        <attr name="gtsTagPaddingLeft" format="dimension" />
+        <attr name="gtsTagPaddingTop" format="dimension" />
+        <attr name="gtsTagPaddingRight" format="dimension" />
+        <attr name="gtsTagPaddingBottom" format="dimension" />
+        <attr name="gtsTagMargin" format="dimension" />
+        <attr name="gtsTagMarginLeft" format="dimension" />
+        <attr name="gtsTagMarginTop" format="dimension" />
+        <attr name="gtsTagMarginRight" format="dimension" />
+        <attr name="gtsTagMarginBottom" format="dimension" />
+        <attr name="gtsTagMinSizeMode" format="enum">
+            <enum name="OnlyHasText" value="0" />
+            <enum name="Always" value="1" />
+        </attr>
+        <attr name="gtsTagMinWidth" format="dimension" />
+        <attr name="gtsTagMinHeight" format="dimension" />
+        <attr name="gtsCenterGap" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="Banner">
+        <attr name="delay_time" format="integer" />
+        <attr name="scroll_time" format="integer" />
+        <attr name="is_auto_play" format="boolean" />
+        <attr name="title_background" format="color|reference" />
+        <attr name="title_textcolor" format="color" />
+        <attr name="title_textsize" format="dimension" />
+        <attr name="title_height" format="dimension" />
+        <attr name="indicator_width" format="dimension" />
+        <attr name="indicator_height" format="dimension" />
+        <attr name="indicator_margin" format="dimension" />
+        <attr name="indicator_drawable_selected" format="reference" />
+        <attr name="indicator_drawable_unselected" format="reference" />
+        <attr name="banner_layout" format="reference" />
+        <attr name="banner_default_image" format="reference" />
+        <attr name="image_scale_type" format="enum">
+            <enum name="center" value="0" />
+            <enum name="center_crop" value="1" />
+            <enum name="center_inside" value="2" />
+            <enum name="fit_center" value="3" />
+            <enum name="fit_end" value="4" />
+            <enum name="fit_start" value="5" />
+            <enum name="fit_xy" value="6" />
+            <enum name="matrix" value="7" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LoadingView">
+        <attr name="count" format="integer" />
+        <attr name="color" format="color|reference" />
+        <attr name="duration" format="integer" />
+        <attr name="type" format="enum">
+            <enum name="daisy" value="0" />
+            <enum name="dot" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PagerSlidingTab">
+        <attr name="pstIndicatorColor" format="color" />
+        <attr name="pstIndicatorHeight" format="dimension" />
+        <attr name="pstUnderlineColor" format="color" />
+        <attr name="pstUnderlineHeight" format="dimension" />
+        <attr name="pstDividerColor" format="color" />
+        <attr name="pstDividerWidth" format="dimension" />
+        <attr name="pstDividerPadding" format="dimension" />
+        <attr name="pstScrollOffset" format="dimension" />
+        <attr name="pstShouldExpand" format="boolean" />
+        <attr name="pstPaddingMiddle" format="boolean" />
+        <attr name="pstTabPaddingLeftRight" format="dimension" />
+        <attr name="pstTabBackground" format="reference" />
+        <attr name="pstTabTextSize" format="dimension" />
+        <attr name="pstTabTextColor" format="reference" />
+        <attr name="pstTabTextStyle" format="reference">
+            <flag name="normal" value="0x0" />
+            <flag name="bold" value="0x1" />
+            <flag name="italic" value="0x2" />
+        </attr>
+        <attr name="pstTabTextAllCaps" format="boolean" />
+        <attr name="pstTabTextAlpha" format="integer" />
+        <attr name="pstTabTextFontFamily" format="string" />
+        <attr name="pstTabInterval" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RowLayout">
+        <attr name="row_icon" format="reference" />
+        <attr name="row_more_icon" format="reference" />
+        <attr name="row_text" format="string" />
+        <attr name="row_hint" format="string" />
+        <attr name="row_switch_visibility">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="4" />
+            <enum name="gone" value="8" />
+        </attr>
+        <attr name="row_more_visibility">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="4" />
+            <enum name="gone" value="8" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="BaseCircleIndicator">
+        <attr name="ci_width" format="dimension" />
+        <attr name="ci_height" format="dimension" />
+        <attr name="ci_margin" format="dimension" />
+        <attr name="ci_animator" format="reference" />
+        <attr name="ci_animator_reverse" format="reference" />
+        <attr name="ci_drawable" format="reference" />
+        <attr name="ci_drawable_unselected" format="reference" />
+
+        <attr name="ci_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+
+        <attr name="ci_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="fill_vertical" value="0x70" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="fill_horizontal" value="0x07" />
+            <flag name="center" value="0x11" />
+            <flag name="fill" value="0x77" />
+            <flag name="clip_vertical" value="0x80" />
+            <flag name="clip_horizontal" value="0x08" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialSearchView">
+        <attr name="searchBackground" format="integer" />
+        <attr name="searchVoiceIcon" format="integer" />
+        <attr name="searchCloseIcon" format="integer" />
+        <attr name="searchBackIcon" format="integer" />
+        <attr name="searchSuggestionIcon" format="integer" />
+        <attr name="searchSuggestionBackground" format="integer" />
+        <attr name="android:hint" />
+        <attr name="android:textColor" />
+        <attr name="android:textColorHint" />
+        <attr name="android:inputType" />
+    </declare-styleable>
+</resources>

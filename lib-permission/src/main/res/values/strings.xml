@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lib-permission</string>
+
+    <string name="permission_rationale_positive_btn">确定</string>
+    <string name="permission_setting_positive_btn">去设置</string>
+    <string name="permission_setting_negative_btn">取消</string>
+
+</resources>

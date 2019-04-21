@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lib-ui</string>
+
+    <string name="dialog_positive_text">确定</string>
+
+    <string name="search_view_search_hint">Search</string>
+</resources>

@@ -8,3 +8,5 @@
 #### 代码更新
 
 编码规范需要遵循：[SimpleAndroid 编码规范](https://github.com/goorich/SimpleAndroid-Lego/blob/master/doc/SimpleAndroid%20%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83.md)
+
+> 此代码库为基础库，不要掺杂任何业务逻辑，如需必要获取业务参数，使用 IOC 注入方式实现

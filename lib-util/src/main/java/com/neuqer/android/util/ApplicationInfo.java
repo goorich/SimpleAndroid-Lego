@@ -28,7 +28,6 @@ import android.content.pm.PackageManager;
  */
 public final class ApplicationInfo {
 
-
     public static int getTargetSdkVersion(Context context) {
         PackageInfo packageInfo = getPackageInfo(context);
         return packageInfo != null ? packageInfo.applicationInfo.targetSdkVersion : -1;

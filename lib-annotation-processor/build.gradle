@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.project.lib_annotation
+    implementation deps.tools.javapoet
+    implementation deps.tools.auto_service
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8

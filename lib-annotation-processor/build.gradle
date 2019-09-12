@@ -5,6 +5,7 @@ dependencies {
     implementation deps.project.lib_annotation
     implementation deps.tools.javapoet
     implementation deps.tools.auto_service
+    implementation deps.project.lib_annotation
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8

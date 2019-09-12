@@ -18,9 +18,10 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation deps.android.v4
     implementation deps.android.v7
+    implementation deps.project.lib_annotation
     implementation deps.tools.butterknife
     annotationProcessor deps.processor.butterknife_apt
 }

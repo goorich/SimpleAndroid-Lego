@@ -29,7 +29,7 @@ import javax.lang.model.SourceVersion;
 import javax.lang.model.element.TypeElement;
 
 /**
- * ModuleApplication 注解处理
+ * ModuleApplication 注解处理，示例使用无实际意义
  *
  * @version v1.0.0
  * @since 2019-07-20 16:36
@@ -51,7 +51,6 @@ public class ModuleApplicationProcessor extends AbstractProcessor {
 
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
-
         return true;
     }
 }

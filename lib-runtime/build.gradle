@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -24,4 +25,16 @@ dependencies {
     implementation deps.project.lib_annotation
     implementation deps.tools.butterknife
     annotationProcessor deps.processor.butterknife_apt
+}
+
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = 'com.neuqer.android'
+            pom.artifactId = 'runtime'
+            pom.version = RUNTIME_VERSION
+            repository(url: uri("$project.rootDir${LOCAL_MAVEN}"))
+        }
+    }
 }

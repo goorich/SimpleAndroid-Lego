@@ -14,23 +14,27 @@
  * limitations under the License.
  */
 
-package com.neuqer.android.annotation;
+package com.neuqer.android.runtime.module;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import android.app.Application;
+import android.content.Context;
 
 /**
- * Module Application 注解
+ * application 接口，用于Module初始化
  *
  * @version v1.0.0
- * @since 2019-07-20 16:28
+ * @since 2019-07-20 15:48
  */
-@Target(ElementType.TYPE)
-@Retention(RetentionPolicy.CLASS)
-public @interface ModuleApplication {
+public interface IModuleApplication {
 
-    /** module Name */
-    String module();
+    /***
+     * {@link Application#attachBaseContext(Context)}
+     */
+    void onApplicationAttachBaseContext(Application application);
+
+    /**
+     * {@link Application#onCreate()}
+     */
+    void onApplicationCreate(Application application);
+
 }

@@ -18,7 +18,7 @@ package com.neuqer.android.network;
 
 import android.app.Application;
 
-import com.neuqer.android.runtime.IModuleApplication;
+import com.neuqer.android.runtime.module.AbsModuleApplication;
 
 /**
  * 网络库 Module Application
@@ -26,7 +26,7 @@ import com.neuqer.android.runtime.IModuleApplication;
  * @version v1.0.0
  * @since 2019-07-20 16:31
  */
-public class NetworkModule implements IModuleApplication {
+public class NetworkModule extends AbsModuleApplication {
 
     @Override
     public void onApplicationAttachBaseContext(Application application) {
@@ -35,5 +35,6 @@ public class NetworkModule implements IModuleApplication {
 
     @Override
     public void onApplicationCreate(Application application) {
+
     }
 }

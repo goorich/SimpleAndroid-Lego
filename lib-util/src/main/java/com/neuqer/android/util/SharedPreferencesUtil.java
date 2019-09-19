@@ -22,8 +22,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 
-import com.neuqer.android.runtime.AppRuntime;
-
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
@@ -89,11 +87,11 @@ public class SharedPreferencesUtil {
     }
 
     private SharedPreferencesUtil(String spName) {
-        sp = AppRuntime.getAppContext().getSharedPreferences(spName, Context.MODE_PRIVATE);
+        sp = UtilModule.getAppContext().getSharedPreferences(spName, Context.MODE_PRIVATE);
     }
 
     private SharedPreferencesUtil(String spName, int mode) {
-        sp = AppRuntime.getAppContext().getSharedPreferences(spName, mode);
+        sp = UtilModule.getAppContext().getSharedPreferences(spName, mode);
     }
 
     /**

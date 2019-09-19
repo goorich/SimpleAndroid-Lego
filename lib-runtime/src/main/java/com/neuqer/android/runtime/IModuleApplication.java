@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.neuqer.android.runtime.module;
+package com.neuqer.android.runtime;
 
 import android.app.Application;
 import android.content.Context;

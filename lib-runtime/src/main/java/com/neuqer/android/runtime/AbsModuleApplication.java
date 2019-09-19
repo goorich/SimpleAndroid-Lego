@@ -1,9 +1,7 @@
-package com.neuqer.android.runtime.module;
+package com.neuqer.android.runtime;
 
 import android.app.Application;
 import android.content.Context;
-
-import com.neuqer.android.runtime.AppRuntime;
 
 /**
  * Module Application
@@ -28,5 +26,10 @@ public abstract class AbsModuleApplication implements IModuleApplication {
      */
     public static Application getApplication() {
         return AppRuntime.getApplication();
+    }
+
+    @Override
+    public void onApplicationAttachBaseContext(Application application) {
+        // 默认实现
     }
 }

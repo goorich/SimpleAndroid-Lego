@@ -3,8 +3,6 @@ package com.neuqer.android.runtime;
 import android.app.Application;
 import android.content.Context;
 
-import com.neuqer.android.runtime.module.ModuleContainer;
-
 /**
  * 运行环境初始化类
  *

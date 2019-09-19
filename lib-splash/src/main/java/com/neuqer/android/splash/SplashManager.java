@@ -20,7 +20,6 @@ package com.neuqer.android.splash;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
-import com.neuqer.android.runtime.AppRuntime;
 import com.neuqer.android.splash.model.Ad;
 import com.neuqer.android.splash.model.Guide;
 import com.neuqer.android.splash.model.Slogan;
@@ -97,7 +96,7 @@ public class SplashManager {
      */
     private static void updateFirstUseStatus(boolean first) {
         SharedPreferencesUtil.getInstance(SP_NAME).put(KEY_FIRST_USE
-                + ApplicationInfo.getVersionName(AppRuntime.getAppContext()), first);
+                + ApplicationInfo.getVersionName(SplashModule.getAppContext()), first);
     }
 
     /**
@@ -105,7 +104,7 @@ public class SplashManager {
      */
     private static boolean isFirstUse() {
         return SharedPreferencesUtil.getInstance(SP_NAME).getBoolean(KEY_FIRST_USE
-                + ApplicationInfo.getVersionName(AppRuntime.getAppContext()), true);
+                + ApplicationInfo.getVersionName(SplashModule.getAppContext()), true);
     }
 
     /**

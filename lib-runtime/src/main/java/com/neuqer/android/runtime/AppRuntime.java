@@ -9,7 +9,7 @@ import android.content.Context;
  * @author techflowing
  * @since 2018/9/15 下午3:44
  */
-public class AppRuntime {
+class AppRuntime {
 
     /** Application */
     static Application sApplication;
@@ -19,21 +19,21 @@ public class AppRuntime {
     /**
      * 获取AppContext
      */
-    public static Context getAppContext() {
+    static Context getAppContext() {
         return sApplication;
     }
 
     /**
      * 获取Application
      */
-    public static Application getApplication() {
+    static Application getApplication() {
         return sApplication;
     }
 
     /**
      * 全局Debug开关
      */
-    public static boolean isDebug() {
+    static boolean isDebug() {
         return sDebug;
     }
 }

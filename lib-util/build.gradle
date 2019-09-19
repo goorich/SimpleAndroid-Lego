@@ -21,5 +21,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation deps.tools.gson
     implementation deps.android.annotation
+    implementation deps.project.lib_annotation
     implementation deps.project.lib_runtime
 }

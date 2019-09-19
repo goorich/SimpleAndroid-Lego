@@ -1,0 +1,28 @@
+apply plugin: 'java-library'
+
+apply plugin: 'kotlin'
+apply plugin: 'maven'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation deps.tools.javassist
+    compileOnly deps.android.gradle_tools
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = 'com.neuqer.gradle.plugin'
+            pom.artifactId = 'gather'
+            pom.version = GATHER_PLUGIN_VERSION
+            repository(url: uri("$project.rootDir${LOCAL_MAVEN}"))
+        }
+    }
+}

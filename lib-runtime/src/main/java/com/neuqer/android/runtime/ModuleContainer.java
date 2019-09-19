@@ -1,4 +1,4 @@
-package com.neuqer.android.runtime.module;
+package com.neuqer.android.runtime;
 
 import android.app.Application;
 
@@ -10,10 +10,10 @@ import java.util.List;
  * @author techflowing
  * @since 2019-09-17 23:10
  */
-public class ModuleContainer implements IModuleApplication, ModuleListProvider {
+public class ModuleContainer implements IModuleApplication, IModuleListProvider {
 
     private static volatile ModuleContainer sInstance;
-    private ModuleListProvider mModuleListProvider;
+    private IModuleListProvider mModuleListProvider;
 
     private ModuleContainer() {
     }
@@ -29,42 +29,42 @@ public class ModuleContainer implements IModuleApplication, ModuleListProvider {
 
     @Override
     public void onApplicationAttachBaseContext(Application application) {
-        List<? extends AbsModuleApplication> list = getModuleList();
+        List<IModuleApplication> list = getModuleList();
         if (list == null) {
             return;
         }
-        for (AbsModuleApplication module : list) {
+        for (IModuleApplication module : list) {
             module.onApplicationAttachBaseContext(application);
         }
     }
 
     @Override
     public void onApplicationCreate(Application application) {
-        List<? extends AbsModuleApplication> list = getModuleList();
+        List<IModuleApplication> list = getModuleList();
         if (list == null) {
             return;
         }
-        for (AbsModuleApplication module : list) {
+        for (IModuleApplication module : list) {
             module.onApplicationCreate(application);
         }
     }
 
     @Override
-    public List<? extends AbsModuleApplication> getModuleList() {
-        ModuleListProvider provider = getModuleListProvider();
+    public List<IModuleApplication> getModuleList() {
+        IModuleListProvider provider = getModuleListProvider();
         return provider != null ? provider.getModuleList() : null;
     }
 
     /**
      * 反射获取Gradle生成的类
      */
-    private ModuleListProvider getModuleListProvider() {
+    private IModuleListProvider getModuleListProvider() {
         if (mModuleListProvider != null) {
             return mModuleListProvider;
         }
         try {
-            Class injectClass = Class.forName(ModuleListProvider.CLASS_NAME);
-            mModuleListProvider = (ModuleListProvider) injectClass.newInstance();
+            Class injectClass = Class.forName(IModuleListProvider.CLASS_NAME);
+            mModuleListProvider = (IModuleListProvider) injectClass.newInstance();
             return mModuleListProvider;
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -77,5 +77,4 @@ public class ModuleContainer implements IModuleApplication, ModuleListProvider {
         }
         return null;
     }
-
 }
